@@ -1,10 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Webpage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baba Saheb Ambedkar Government Polytechnic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+        body {scroll-behavior: smooth; background-color: #f8f9fa; color: #333;}
+        header {position: fixed; width: 100%; background: #0a4275; color: #fff; padding: 15px 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        nav {display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; padding: 0 20px;}
+        nav h1 {font-size: 1.4rem; font-weight: 600; letter-spacing: 0.5px;}
+        .nav-links a {color: #fff; text-decoration: none; margin: 0 15px; font-weight: 500; transition: 0.3s;}
+        .nav-links a:hover {color: #ffd700;}
+
+        section {padding: 80px 20px; max-width: 1100px; margin: auto;}
+        .hero {background: url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1600&q=60') center/cover no-repeat; height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white;}
+        .hero h2 {font-size: 2.5rem; background: rgba(0,0,0,0.5); padding: 10px 20px; border-radius: 10px;}
+        .hero p {margin-top: 15px; font-size: 1.1rem; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 8px;}
+
+        .about, .teachers, .gallery, .contact, .login {margin-top: 40px;}
+        h2.section-title {font-size: 2rem; margin-bottom: 25px; text-align: center; color: #0a4275;}
+
+        .teachers-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;}
+        .teacher-card {background: #fff; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; padding: 20px; transition: 0.3s;}
+        .teacher-card:hover {transform: translateY(-5px);}
+        .teacher-card img {width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;}
+
+        .gallery-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;}
+        .gallery-grid img {width: 100%; border-radius: 10px; height: 200px; object-fit: cover;}
+
+        form {display: flex; flex-direction: column; max-width: 500px; margin: auto;}
+        form input, form textarea {margin: 10px 0; padding: 10px; border-radius: 5px; border: 1px solid #ccc;}
+        form button {padding: 10px; border: none; border-radius: 5px; background: #0a4275; color: #fff; font-weight: 600; cursor: pointer;}
+        form button:hover {background: #093864;}
+
+        footer {background: #0a4275; color: #fff; text-align: center; padding: 20px 0; margin-top: 60px;}
+
+        @media (max-width: 768px){nav h1{font-size: 1rem;} .nav-links a{margin: 0 8px; font-size: 0.9rem;}}
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple HTML page created as an example.</p>
+    <header>
+        <nav>
+            <h1>Baba Saheb Ambedkar Govt Polytechnic</h1>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#teachers">Teachers</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+                <a href="#login">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Welcome to Baba Saheb Ambedkar Government Polytechnic</h2>
+        <p>Empowering Students with Technical Excellence & Professional Integrity</p>
+         <img src="C:\Users\subra\OneDrive\Pictures\Minor project.png">
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="section-title">About Our College</h2>
+        <p>Baba Saheb Ambedkar Government Polytechnic is a premier institute committed to providing high-quality technical education. With a team of dedicated faculty members, modern laboratories, and strong industry connections, we aim to develop skilled professionals for the future. Our mission is to foster innovation, discipline, and excellence in all aspects of learning.</p>
+    </section>
+
+    <section class="teachers" id="teachers">
+        <h2 class="section-title">Our Faculty</h2>
+        <div class="teachers-grid">
+            <div class="teacher-card">
+                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Teacher">
+                <h3>Mr. Ramesh Verma</h3>
+                <p>Subject: Electrical Engineering</p>
+                <p>Not Teaching: Civil</p>
+            </div>
+            <div class="teacher-card">
+                <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="Teacher">
+                <h3>Ms. Priya Nair</h3>
+                <p>Subject: Computer Science</p>
+                <p>Not Teaching: Mechanical</p>
+            </div>
+            <div class="teacher-card">
+                <img src="C:\Users\subra\OneDrive\Pictures\paroboostzone2.jpg" alt="Teacher">
+                <h3>Mr. Ankit Sharma</h3>
+                <p>Subject: Mechanical Engineering</p>
+                <p>Not Teaching: Electrical</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h2 class="section-title">Campus Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=60" alt="Campus">
+            <img src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76e?auto=format&fit=crop&w=800&q=60" alt="Library">
+            <img src="https://images.unsplash.com/photo-1581092334305-88c9e7f1a94d?auto=format&fit=crop&w=800&q=60" alt="Lab">
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section class="login" id="login">
+        <h2 class="section-title">Login</h2>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Baba Saheb Ambedkar Government Polytechnic | All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
