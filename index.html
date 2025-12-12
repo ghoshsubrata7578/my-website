@@ -3,123 +3,976 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baba Saheb Ambedkar Government Polytechnic</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>BSAGP University - Premier Institution for Higher Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
-        body {scroll-behavior: smooth; background-color: #f8f9fa; color: #333;}
-        header {position: fixed; width: 100%; background: #0a4275; color: #fff; padding: 15px 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
-        nav {display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; padding: 0 20px;}
-        nav h1 {font-size: 1.4rem; font-weight: 600; letter-spacing: 0.5px;}
-        .nav-links a {color: #fff; text-decoration: none; margin: 0 15px; font-weight: 500; transition: 0.3s;}
-        .nav-links a:hover {color: #ffd700;}
+        /* Global Styles */
+        * {
+            margin: 10;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-        section {padding: 80px 20px; max-width: 1100px; margin: auto;}
-        .hero {background: url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1600&q=60') center/cover no-repeat; height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white;}
-        .hero h2 {font-size: 2.5rem; background: rgba(0,0,0,0.5); padding: 10px 20px; border-radius: 10px;}
-        .hero p {margin-top: 15px; font-size: 1.1rem; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 8px;}
+        body {
+            line-height: 1.6;
+            color: #6bc300;
+        }
 
-        .about, .teachers, .gallery, .contact, .login {margin-top: 40px;}
-        h2.section-title {font-size: 2rem; margin-bottom: 25px; text-align: center; color: #0a4275;}
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-        .teachers-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;}
-        .teacher-card {background: #fff; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; padding: 20px; transition: 0.3s;}
-        .teacher-card:hover {transform: translateY(-5px);}
-        .teacher-card img {width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 10px;}
+        section {
+            padding: 60px 0;
+        }
 
-        .gallery-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;}
-        .gallery-grid img {width: 100%; border-radius: 10px; height: 200px; object-fit: cover;}
+        h1, h2, h3, h4,h5 {
+            margin-bottom: 20px;
+            color: #151313a1;
+        }
 
-        form {display: flex; flex-direction: column; max-width: 500px; margin: auto;}
-        form input, form textarea {margin: 10px 0; padding: 10px; border-radius: 5px; border: 1px solid #ccc;}
-        form button {padding: 10px; border: none; border-radius: 5px; background: #0a4275; color: #fff; font-weight: 600; cursor: pointer;}
-        form button:hover {background: #093864;}
+        p {
+            margin-bottom: 15px;
+        }
 
-        footer {background: #0a4275; color: #fff; text-align: center; padding: 20px 0; margin-top: 60px;}
+        a {
+            text-decoration: none;
+            color: #3498db;
+            transition: all 0.3s ease;
+        }
 
-        @media (max-width: 768px){nav h1{font-size: 1rem;} .nav-links a{margin: 0 8px; font-size: 0.9rem;}}
+        a:hover {
+            color: #2980b9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #3498db;
+            margin: 20px auto;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #2c3e50;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #3498db;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #3498db;
+        }
+
+        .apply-btn {
+            background: #0a39e0;
+            padding: 8px 20px;
+            border-radius: 5px;
+            margin-left: 20px;
+        }
+
+        .apply-btn:hover {
+            background: #f08940;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('C:\Users\subra\Downloads\facebook cover.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .hero-buttons .btn {
+            margin: 0;
+        }
+
+        .secondary-btn {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        .secondary-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Programs Section */
+        .programs {
+            background: #f9f9f9;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .program-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .program-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .program-card:hover .program-img img {
+            transform: scale(1.1);
+        }
+
+        .program-info {
+            padding: 20px;
+        }
+
+        .program-info h3 {
+            margin-bottom: 10px;
+        }
+
+        .program-duration {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .view-all {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .stat-item h4 {
+            font-size: 36px;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+
+        /* Faculty Section */
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .faculty-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .faculty-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid #f1f1f1;
+        }
+
+        .faculty-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .faculty-position {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: #f9f9f9;
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-item {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            margin: 0 15px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        .author-info p {
+            color: #777;
+            margin-bottom: 0;
+        }
+
+        /* News & Events */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .news-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .news-card:hover .news-img img {
+            transform: scale(1.1);
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-date {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 0 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo span {
+            color: #3498db;
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #3498db;
+            transform: translateY(-3px);
+        }
+
+        .footer-links h3, .footer-contact h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: #ddd;
+        }
+
+        .footer-links ul li a:hover {
+            color: #3498db;
+            padding-left: 5px;
+        }
+
+        .contact-info {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: #3498db;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-img {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .menu-toggle {
+                display: block;
+                margin-top: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 40px 0;
+            }
+            
+            .hero {
+                height: auto;
+                padding: 100px 0;
+            }
+            
+            .hero h1 {
+                font-size: 30px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Header & Navigation -->
     <header>
-        <nav>
-            <h1>Baba Saheb Ambedkar Govt Polytechnic</h1>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#teachers">Teachers</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-                <a href="#login">Login</a>
+        <div class="container header-container">
+            <div class="logo">
+                <span>Tech</span> University
             </div>
-        </nav>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#faculty">Faculty</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="apply-btn">Apply Now</a></li>
+                </ul>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero" id="home">
-        <h2>Welcome to Baba Saheb Ambedkar Government Polytechnic</h2>
-        <p>Empowering Students with Technical Excellence & Professional Integrity</p>
-         <img src="C:\Users\subra\OneDrive\Pictures\Minor project.png">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to Tech University</h1>
+                <p>Shaping the future through education, research, and innovation since 1995</p>
+                <div class="hero-buttons">
+                    <a href="#programs" class="btn">Explore Programs</a>
+                    <a href="#contact" class="btn secondary-btn">Schedule a Visit</a>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <h2 class="section-title">Our Academic Programs</h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="C:\Users\subra\OneDrive\Pictures\istockphoto-1443560890-612x612.jpg"alt="Computer Science">
+                    </div>
+                    <div class="program-info">
+                        <h3>digital Marketing</h3>
+                        <p>Comprehensive program covering algorithms, data structures, and software development with hands-on projects.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="C:\Users\subra\Downloads\digital marketing 2.jpg" alt="Business Administration">
+                    </div>
+                    <div class="program-info">
+                        <h3>Business Administration</h3>
+                        <p>Develop leadership and management skills for the corporate world with our AACSB-accredited program.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="C:\Users\subra\Downloads\এবার আকর্ষণীয় বিজ্ঞাপন ভিডিও.png" alt="Electrical Engineering">
+                    </div>
+                    <div class="program-info">
+                        <h3>Electrical Engineering</h3>
+                        <p class="program-duration">Bachelor's Degree • 4 Years</p>
+                        <p>Learn about circuits, power systems, and electronic devices with our ABET-accredited program.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="program-card">
+                <div class="program-img">
+                    <img src="C:\Users\subra\Downloads\facebook.png"alt="Professional Logo Design">
+                </div>
+                <div class="program-info">
+                    <h3>Professional logo Design</h3>
+                </div>
+            </div>
+             <div class="program-card">
+                <div class="program-img">
+                    <img src="C:\Users\subra\Downloads\ParoboosTzone.png"alt="Professional Logo Design">
+                </div>
+                <div class="program-info">
+                    <h3>Professional logo Design</h3>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="#" class="btn">View All Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
     <section class="about" id="about">
-        <h2 class="section-title">About Our College</h2>
-        <p>Baba Saheb Ambedkar Government Polytechnic is a premier institute committed to providing high-quality technical education. With a team of dedicated faculty members, modern laboratories, and strong industry connections, we aim to develop skilled professionals for the future. Our mission is to foster innovation, discipline, and excellence in all aspects of learning.</p>
-    </section>
-
-    <section class="teachers" id="teachers">
-        <h2 class="section-title">Our Faculty</h2>
-        <div class="teachers-grid">
-            <div class="teacher-card">
-                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Teacher">
-                <h3>Mr. Ramesh Verma</h3>
-                <p>Subject: Electrical Engineering</p>
-                <p>Not Teaching: Civil</p>
-            </div>
-            <div class="teacher-card">
-                <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="Teacher">
-                <h3>Ms. Priya Nair</h3>
-                <p>Subject: Computer Science</p>
-                <p>Not Teaching: Mechanical</p>
-            </div>
-            <div class="teacher-card">
-                <img src="C:\Users\subra\OneDrive\Pictures\paroboostzone2.jpg" alt="Teacher">
-                <h3>Mr. Ankit Sharma</h3>
-                <p>Subject: Mechanical Engineering</p>
-                <p>Not Teaching: Electrical</p>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Our University</h2>
+                    <p>Founded in 1995, Tech University has grown from a small technical institute to a comprehensive university with over 10,000 students across five schools.</p>
+                    <p>Our commitment to innovation and excellence has positioned us as a leader in STEM education, with state-of-the-art facilities and world-class faculty.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h4>10,000+</h4>
+                            <p>Students</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>95%</h4>
+                            <p>Graduation Rate</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>50+</h4>
+                            <p>Degree Programs</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>25</h4>
+                            <p>Research Centers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="University Campus">
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="gallery" id="gallery">
-        <h2 class="section-title">Campus Gallery</h2>
-        <div class="gallery-grid">
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=60" alt="Campus">
-            <img src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76e?auto=format&fit=crop&w=800&q=60" alt="Library">
-            <img src="https://images.unsplash.com/photo-1581092334305-88c9e7f1a94d?auto=format&fit=crop&w=800&q=60" alt="Lab">
+    <!-- Faculty Section -->
+    <section class="faculty" id="faculty">
+        <div class="container">
+            <h2 class="section-title">Meet Our Faculty</h2>
+            <div class="faculty-grid">
+                <div class="faculty-card">
+                    <div class="faculty-img">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Sarah Johnson">
+                    </div>
+                    <h3>Dr. Sarah Johnson</h3>
+                    <p class="faculty-position">Professor of Computer Science</p>
+                    <p>PhD in Computer Science from MIT with 15 years of teaching experience.</p>
+                    <a href="#" class="btn">View Profile</a>
+                </div>
+                
+                <div class="faculty-card">
+                    <div class="faculty-img">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Prof. Michael Chen">
+                    </div>
+                    <h3>Prof. Michael Chen</h3>
+                    <p class="faculty-position">Dean of Business School</p>
+                    <p>Former executive with 20+ years of industry experience before transitioning to academia.</p>
+                    <a href="#" class="btn">View Profile</a>
+                </div>
+                
+                <div class="faculty-card">
+                    <div class="faculty-img">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Emily Wilson">
+                    </div>
+                    <h3>Dr. Emily Wilson</h3>
+                    <p class="faculty-position">Head of Engineering</p>
+                    <p>Recipient of the National Engineering Excellence Award for her research in renewable energy.</p>
+                    <a href="#" class="btn">View Profile</a>
+                </div>
+                
+                <div class="faculty-card">
+                    <div class="faculty-img">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Prof. David Kim">
+                    </div>
+                    <h3>Prof. David Kim</h3>
+                    <p class="faculty-position">Biology Department Chair</p>
+                    <p>Published over 50 research papers in leading scientific journals.</p>
+                    <a href="#" class="btn">View Profile</a>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Students Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-item">
+                    <p class="testimonial-text">"The Computer Science program at Tech University gave me the skills and confidence to land my dream job at a top tech company. The professors are incredibly supportive and the curriculum is always up-to-date with industry trends."</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Jessica Martinez">
+                        </div>
+                        <div class="author-info">
+                            <h4>Jessica Martinez</h4>
+                            <p>Computer Science, Class of 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events Section -->
+    <section class="news">
+        <div class="container">
+            <h2 class="section-title">News & Events</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-img">
+                        <img src="https://images.unsplash.com/photo-1524179091875-bf99a9a6af57?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Research Grant">
+                    </div>
+                    <div class="news-content">
+                        <p class="news-date">June 15, 2023</p>
+                        <h3>University Receives $5M Research Grant</h3>
+                        <p>Tech University has been awarded a $5 million grant from the National Science Foundation for renewable energy research.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-img">
+                        <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Graduation Ceremony">
+                    </div>
+                    <div class="news-content">
+                        <p class="news-date">May 28, 2023</p>
+                        <h3>Spring 2023 Graduation Ceremony</h3>
+                        <p>Join us as we celebrate the achievements of our graduating class at the annual commencement ceremony.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-img">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Open House">
+                    </div>
+                    <div class="news-content">
+                        <p class="news-date">April 10, 2023</p>
+                        <h3>Spring Open House Events</h3>
+                        <p>Prospective students are invited to tour our campus and learn about our academic programs.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2 class="section-title">Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Have questions about our programs, admissions process, or campus life? Our team is here to help.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>123 University Avenue, Tech City, TC 12345</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>(123) 456-7890</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>admissions@techuniversity.edu</p>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 30px;">Office Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="login" id="login">
-        <h2 class="section-title">Login</h2>
-        <form>
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-    </section>
-
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Baba Saheb Ambedkar Government Polytechnic | All Rights Reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <span>Tech</span> University
+                    </div>
+                    <p>Committed to excellence in education, research, and community engagement since 1995.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#programs">Academic Programs</a></li>
+                        <li><a href="#faculty">Faculty</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Student Life</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#">Career Services</a></li>
+                        <li><a href="#">Alumni</a></li>
+                        <li><a href="#">News & Events</a></li>
+                        <li><a href="#">Campus Map</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 University Avenue<br>Tech City, TC 12345</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <p>(123) 456-7890</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@techuniversity.edu</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Tech University. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('show')) {
+                        navMenu.classList.remove('show');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
